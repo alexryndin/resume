@@ -38,26 +38,47 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-0pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1:}{ #2 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+\vspace{-1pt}\item{
+    \begin{tabular}[t]{l r}
+    	\textbf{#1} \\
+	{#2}, \textit{\small#4} \\
+	 \textit{\small #3} 
+    \end{tabular}\vspace{-5pt}
+  }
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\expSubheading}[4]{
+\vspace{-1pt}\item{
+    \begin{tabular}[t]{l  l}
+    	\textbf{#1}, { #3} \\
+	 \textit{#2 }\textbar \textit{ \small #4} 
+    \end{tabular}\vspace{-5pt}
+  }
+}
+
+\newcommand{\educationSubheading}[4]{
+\vspace{-4pt}\item{
+    \begin{tabular}[t]{l r}
+    	\textbf{#1} \\
+	{#2}, \textit{\small#4} \\
+	 \textit{\small #3} 
+    \end{tabular}\vspace{-5pt}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\vspace{-0pt}\resumeItem{#1}{#2}\vspace{-0pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -78,14 +99,14 @@
   \href{http://alexryndin.me/}{http://www.alexryndin.me} & Mobile : +7-999-700-17-13 \\
 \end{tabular*}
 
-
+\begin{minipage}[t]{0.66\textwidth} 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \educationSubheading
       {National University of Science and Technology MISiS}{Moscow, Russia}
       {Bachelor of Information Systems and Technologies;  GPA: 4.95 }{Sep. 2012 -- June. 2016}
-    \resumeSubheading
+    \educationSubheading
       {National University of Science and Technology MISiS}{Moscow, Russia}
       {Master of Information Systems and Technologies;  GPA: 4.7 }{Sep. 2016 -- June. 2018}
   \resumeSubHeadingListEnd
@@ -95,19 +116,7 @@
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Arenadata}{Moscow, Russia}
-      {Software Engineer}{May 2017 - Aug 2017}
-      \resumeItemListStart
-        \resumeItem{Arenadata Hadoop}
-          { is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models.}
-        \resumeItem{Arenadata Ambari}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
-        \resumeItem{Arenadata Ambari}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
-      \resumeItemListEnd
-
-    \resumeSubheading
+    \expSubheading
       {Arenadata}{Moscow, Russia}
       {Software Engineer}{Sep 2017 - Present}
       \resumeItemListStart
@@ -116,10 +125,22 @@
         \resumeItem{Arenadata Ambari}
           {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
         \resumeItem{Arenadata Grid}
+          {A totally new product was introduced to the Arenadata Enterpise Platform. Being head of development, I made the integration of the product, performed load testing, created automatic deployment scripts}
+      \resumeItemListEnd
+
+    \expSubheading
+      {Arenadata}{Moscow, Russia}
+      {Software Engineer, Intern}{May 2017 - Aug 2017}
+      \resumeItemListStart
+        \resumeItem{Dive in}
+          {Introduction to Big data technologies, Hadoop ecosystem and tools, Open Sourse Community and its rules. Overview of the company products, including ODPi compiant Hadoop Distribution Arenadata Hadoop}
+        \resumeItem{Achievements}
+          {First commit to the main repository in five days}
+        \resumeItem{Arenadata Ambari}
           {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
       \resumeItemListEnd
 
-    \resumeSubheading
+    \expSubheading
       {Aria Invertor}{Stary Oskol, Belgorod Oblast, Russia}
       {Software Developer}{Mar 2016 - Jun 2016}
       \resumeItemListStart
@@ -128,7 +149,6 @@
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
 
 %-----------PROJECTS-----------------
 \section{Projects}
@@ -144,20 +164,64 @@
   \resumeSubHeadingListEnd
 
 
+
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth} 
+
 %-----------SKILLS------------
 \section{Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: Python, Java, Elixir, Javascript, C++/QT\newline
-      , SQL}
+\begin{itemize}[leftmargin=*]
+	\item{ \textbf{Languages}{\vspace{-8pt}}
+		 \begin{itemize}
+			 \item{\textit{\small{Over 5000 lines:}}\newline}
+			Python, Java
+			 \item{\textit{\small{Over 500 lines:}}\newline}
+			Elixir, C++/QT
+		\end{itemize}
     }
-    \item{
-      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-      \hfill
+	\item{ \textbf{Tools}{\vspace{-8pt}}
+		 \begin{itemize}
+			 \item{\textit{\small{Can't live without:}}\newline}
+			Linux, vim, bash, zsh
+			  \item{\textit{\small{Use a lot:}}\newline}
+			 Ansible, Jira, Git and GitHub, Google Cloud Platform, Slack
+			 \item{\textit{\small{Familiar:}}\newline}
+			 Apache Spark, TeX,
+		\end{itemize}
 
     }
+	\item{ \textbf{Technologies:}{\vspace{-0pt}}\newline
+		Hadoop, Graphana, Graphite, KVM
+
+    }
+ \end{itemize}
+
+%-----------OTHER-----------------
+\section{Other}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Supervised Learning}
+      {Coursera course, certificate MZTDS6LU4Y6H}
+    \resumeSubItem{Mathematics and Python for Data Analysis}
+      {Coursera course, certificate 115G44VX8NJ737}
+     \item\small{
+    \textbf{Big Data Foundations, Level 2: }{IBM Course\vspace{-2pt}}}
+    \resumeSubItem {Hadoop Foundations, Leve 2: }
+      {IBM Course}
+    \resumeSubItem{Spark - Level 1}
+      {IBM Course}
+    \resumeSubItem {Information Storage and Management}
+      {EMC Academic Associate Course}
+
   \resumeSubHeadingListEnd
+%Hadoop Administration - Level 1 Certification Date Apr 2017 – Present IBM
+%Hadoop Foundations - Level 2 Certification Date Apr 2017 – Present IBM
+%Dell EMC Educated Modern Data Center Certification Date Dec 2016 – Present Dell EMC
+%EMC Academic Associate, Information Storage and Management Certification Date Dec 2016 – %P%resent License ZE4RW6SRJ1FEC1JC Dell EMC
+
+
+%-----------SKILLS------------
 
 
 %-------------------------------------------
+\end{minipage}
 \end{document}
