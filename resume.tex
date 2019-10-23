@@ -4,7 +4,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -49,6 +49,12 @@
   }
 }
 
+\newcommand{\resumeBigItem}[2]{
+  \item{
+    \textbf{#1:}{ #2 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
 \vspace{-1pt}\item{
     \begin{tabular}[t]{l r}
@@ -88,7 +94,7 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  CV STARTS HERE  %%%%%%%
 
 
 \begin{document}
@@ -115,19 +121,26 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-
+    \expSubheading
+      {Mail.ru Group}{Moscow, Russia}
+      {DevOps Developer}{July 2019 - Present}
+      \resumeItemListStart
+        \resumeItem{Arenadata Grid}
+        {Upgraded internal metrics system to a new technology stack. Created a number of software modules provided logs and metrics parsing, transferring, receiving and injestion. Provided support and maintenance for a cluster with more than 300 nodes. Technology stack included Clickhouse, Apache Hadoop, PostgreSQL, Mysql, Prometeus, Graphite, GitLab}
+      \resumeItemListEnd
     \expSubheading
       {Arenadata}{Moscow, Russia}
-      {Software Engineer}{Sep 2017 - Present}
+      {Software Engineer}{Sep 2017 - June 2019}
       \resumeItemListStart
-        \resumeItem{Arenadata Hadoop}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models.}
-        \resumeItem{Arenadata Ambari}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
         \resumeItem{Arenadata Grid}
-          {A totally new product was introduced to the Arenadata Enterpise Platform. Being head of development, I made the integration of the product, performed load testing, created automatic deployment scripts}
+          {A totally new product based on Apache Ignite was introduced to the Arenadata Enterpise Platform. Being head of development, I made the integration of the product, performed load testing, created automatic deployment scripts}
+        \resumeItem{Arenadata Cluster Manager}
+          {Two new services were added to the brand new Arenadata Cluster Manager. A lot of Ansible scripts has been developed. Made integration with metrics system based on Graphite/Graphana}
+        \resumeItem{Arenadata Hadoop}
+          {Installation and maintenance, support and troubleshooting}
+        \resumeItem{Arenadata Ambari}
+          {Python deployment scripts development and refactoring. A new product has been integrated as a part of Arenadata Hadoop stack - Hive LLAP. Over 100 commits in Arenadata Ambari repo}
       \resumeItemListEnd
-
     \expSubheading
       {Arenadata}{Moscow, Russia}
       {Software Engineer, Intern}{May 2017 - Aug 2017}
@@ -135,9 +148,7 @@
         \resumeItem{Dive in}
           {Introduction to Big data technologies, Hadoop ecosystem and tools, Open Sourse Community and its rules. Overview of the company products, including ODPi compiant Hadoop Distribution Arenadata Hadoop}
         \resumeItem{Achievements}
-          {First commit to the main repository in five days}
-        \resumeItem{Arenadata Ambari}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+          {First commit to the main repository in five days. Five new services were integrated as a part of Arenadata Ambari. Public speech was given to people from 8 different countries about company’s product.}
       \resumeItemListEnd
 
     \expSubheading
@@ -145,24 +156,21 @@
       {Software Developer}{Mar 2016 - Jun 2016}
       \resumeItemListStart
         \resumeItem{Task Management System}
-          {Kind of web-oriented ERP System, written in Python with Flask. Developed to facilitate a process of creating, assinging and monitoring of work tasks.}
+          {Designed and developed a kind of web-oriented ERP System from scratch, written in Python with Flask, backed with mysql and SQLAlchemy on a storage level. System were developed to facilitate a process of creating, assinging and monitoring of work tasks.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
-\section{Projects}
+ %-----------PUBLICATIONS & ACHIEVEMENTS------------
+\section{Publications \& Achievements}
   \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+     \resumeSubItem{Samsung Compiler Bootcamp}
+        {Accomplished introductory course on compilers development}
+     \resumeSubItem{RedF programming language}
+        {Implemeted lisp-like programming language in C \href{https://github.com/ValBaturin/redF}{https://github.com/ValBaturin/redF}; Live preview - \href{http://projectf.alexryndin.me/}{http://projectf.alexryndin.me/}}
+    \resumeSubItem{"Memorable" Computing (rus)}
+        {Introduction to a concept and principles of new Arenadata In-Memory computing platform called Arenadata Grid. Open Systems Journal (ISSN 1028-7493), June 2018.}
   \resumeSubHeadingListEnd
-
 
 
 \end{minipage}
@@ -173,45 +181,53 @@
 \begin{itemize}[leftmargin=*]
 	\item{ \textbf{Languages}{\vspace{-8pt}}
 		 \begin{itemize}
-			 \item{\textit{\small{Over 5000 lines:}}\newline}
-			Python, Java
-			 \item{\textit{\small{Over 500 lines:}}\newline}
-			Elixir, C++/QT
+			 \item{C, Python}
+			 \item{Java}
+			 \item{Haskell}
 		\end{itemize}
     }
 	\item{ \textbf{Tools}{\vspace{-8pt}}
 		 \begin{itemize}
 			 \item{\textit{\small{Can't live without:}}\newline}
-			Linux, vim, bash, zsh
+			Linux (esp. Arch), vim, bash, zsh
 			  \item{\textit{\small{Use a lot:}}\newline}
 			 Ansible, Jira, Git and GitHub, Google Cloud Platform, Slack
 			 \item{\textit{\small{Familiar:}}\newline}
-			 Apache Spark, TeX,
+			 TeX
 		\end{itemize}
 
     }
 	\item{ \textbf{Technologies:}{\vspace{-0pt}}\newline
-		Hadoop, Graphana, Graphite, KVM
-
+		Hadoop (HDFS, YARN, Hive, Mapred, HBASE); \newline
+		Clickhouse;                             \newline
+		Ansible, Puppet;                        \newline
+		Apache Ignite;                           \newline
+		Graphana, Graphite;                      \newline
+		KVM, Apache Spark.
     }
  \end{itemize}
+ 
+
 
 %-----------OTHER-----------------
 \section{Other}
   \resumeSubHeadingListStart
+    \resumeSubItem{Implementing web-services in Go, Part 1 \& 2}
+      {Coursera Course, RUS}
+    \resumeSubItem{Functional Programming with Haskell, Part 1}
+      {Stepik Course, certificate 117882}
     \resumeSubItem{Supervised Learning}
       {Coursera course, certificate MZTDS6LU4Y6H}
     \resumeSubItem{Mathematics and Python for Data Analysis}
       {Coursera course, certificate 115G44VX8NJ737}
      \item\small{
     \textbf{Big Data Foundations, Level 2: }{IBM Course\vspace{-2pt}}}
-    \resumeSubItem {Hadoop Foundations, Leve 2: }
+    \resumeSubItem {Hadoop Foundations, Level 2}
       {IBM Course}
     \resumeSubItem{Spark - Level 1}
       {IBM Course}
     \resumeSubItem {Information Storage and Management}
       {EMC Academic Associate Course}
-
   \resumeSubHeadingListEnd
 %Hadoop Administration - Level 1 Certification Date Apr 2017 – Present IBM
 %Hadoop Foundations - Level 2 Certification Date Apr 2017 – Present IBM
@@ -219,7 +235,6 @@
 %EMC Academic Associate, Information Storage and Management Certification Date Dec 2016 – %P%resent License ZE4RW6SRJ1FEC1JC Dell EMC
 
 
-%-----------SKILLS------------
 
 
 %-------------------------------------------
